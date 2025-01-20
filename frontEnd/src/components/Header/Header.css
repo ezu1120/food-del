@@ -1,0 +1,98 @@
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  background: url("/header_img.png") no-repeat center center;
+  background-size: contain; /* Ensures the image covers the entire area */
+  position: relative;
+}
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 3s;
+}
+.header-contents h2 {
+  font-weight: 500;
+  color: white;
+  font-size: max(4.5vw, 22px);
+}
+.header-contents p {
+  color: white;
+  font-size: 1vw;
+}
+.header-contents button {
+  border: none;
+  font-weight: 500;
+  padding: 1vw 2.3vw;
+  background-color: white;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+
+}
+/* Responsive for tablets (up to 1050px) */
+@media (max-width: 1050px) {
+  .header {
+    height: 40vw; /* Adjust header height for medium screens */
+  }
+
+  .header-content {
+    max-width: 45%;
+  }
+
+  .header-content h2 {
+    font-size: max(5vw, 22px); /* Increase font-size for better readability */
+  }
+}
+
+/* Responsive for smaller tablets and mobile devices (up to 750px) */
+@media (max-width: 750px) {
+  .header {
+    height: 50vw; /* Increase header height to accommodate smaller screens */
+  }
+
+  .header-content {
+    max-width: 65%;
+    left: 4vh; /* Adjust left padding */
+  }
+
+  .header-content h2 {
+    font-size: max(6vw, 20px); /* Further increase font-size */
+  }
+
+  .header-content p {
+    display: none; /* Hide the paragraph text on smaller screens for simplicity */
+  }
+
+  .header-content button {
+    padding: 2vw 4vw; /* Increase padding for better touch interaction */
+    font-size: max(2vw, 12px); /* Ensure button text is legible */
+  }
+}
+
+/* Responsive for mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .header {
+    height: 60vw; /* Increase height for mobile */
+    background-size: cover; /* Ensure the image covers the background */
+  }
+
+  .header-content {
+    max-width: 80%; /* Full width for content */
+    left: 2vh; /* Reduce left margin for small screens */
+    bottom: 5%; /* Adjust the position of the content */
+  }
+
+  .header-content h2 {
+    font-size: max(7vw, 18px); /* Adjust the font size for readability */
+  }
+
+  .header-content button {
+    padding: 3vw 6vw; /* Larger touch target for buttons */
+    font-size: max(3vw, 11px); /* Adjust button text size */
+  }
+}

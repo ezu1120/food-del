@@ -1,0 +1,93 @@
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.explore-menu h1 {
+  color: #262626;
+  font-weight: 500;
+  font-size: 2.5vw; /* Adjusts with screen size */
+}
+
+.explore-menu-text {
+  max-width: 60%;
+  color: #808080;
+
+}
+.explore-menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin: 20px 0px;
+  overflow-x: scroll;
+
+}
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+.explore-menu-list-item img {
+  width: 7.5vw; /* Responsive image size */
+  min-width: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.explore-menu-list-item p {
+  margin-top: 10px;
+  color: #747474;
+  font-size: max(1.4vw, 16px); /* Text size is responsive */
+  cursor: pointer;
+}
+.explore-menu hr {
+  margin: 10px 0px;
+  height: 2px;
+  background-color: #e2e2e2;
+  border: none;
+}
+.explore-menu-list-item img.active {
+  border-radius: 50%;
+  border: 4px solid #ff8c00;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+/* Responsive adjustments */
+@media (max-width: 1050px) {
+  .explore-menu-text {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  
+  .explore-menu h1 {
+    font-size: 4vw; /* Larger text size for smaller screens */
+  }
+  
+  .explore-menu-list-item img {
+    width: 10vw; /* Increase image size on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-menu h1 {
+    font-size: 5vw; /* Even larger text size for mobile devices */
+  }
+  
+  .explore-menu-text {
+    font-size: 3vw; /* Adjust text size for smaller screens */
+  }
+
+  .explore-menu-list-item img {
+    width: 15vw; /* Larger image size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-menu-list {
+    gap: 10px; /* Less gap for smaller devices */
+  }
+  
+  .explore-menu-list-item p {
+    font-size: 12px; /* Smaller text size on mobile */
+  }
+}

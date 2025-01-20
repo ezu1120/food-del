@@ -1,0 +1,138 @@
+/* LoginPopup.css */
+.login-popup {
+  position: fixed; /* Ensure the popup stays on top */
+  top: 0;
+  left: 0;
+  z-index: 999; /* Higher z-index to ensure visibility */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dim background */
+  display: grid;
+  place-items: center; /* Center content both vertically and horizontally */
+}
+
+.login-popup-container {
+  width: max(23vw, 330px); /* Responsive width */
+  color: #808080;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  animation: fadeInPopup 0.5s ease-in-out;
+}
+
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.login-popup-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.login-popup-title img {
+  width: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.login-popup-title img:hover {
+  transform: rotate(90deg); /* Rotate cross icon on hover */
+}
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-popup-inputs input {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+  border-color: #000; /* Highlight border on focus */
+}
+
+.login-popup-container button {
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: tomato;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e74c3c; /* Darken button color on hover */
+}
+
+.login-popup-condition {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-top: -15px;
+}
+
+.login-popup-condition input {
+  margin-top: 5px;
+}
+
+.login-popup-condition p {
+  font-size: 12px;
+  color: #666;
+}
+
+.login-popup p {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+.login-popup p span {
+  color: tomato;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-popup p span:hover {
+  text-decoration: underline;
+}
+
+/* Popup fade-in animation */
+@keyframes fadeInPopup {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-popup-container {
+    width: 80%; /* Make the container smaller on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-popup-container {
+    width: 90%; /* Even smaller on very small screens */
+  }
+}
