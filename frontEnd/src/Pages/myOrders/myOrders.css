@@ -22,6 +22,7 @@
 }
 .my-orders-order p span{
     color: tomato;
+    padding:2px;
 }
 .my-orders-order p b{
     font-weight: 500;
