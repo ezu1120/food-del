@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"; // For route navigation
 import { HashLink } from "react-router-hash-link"; // For smooth in-page scrolling
-import "./navbar.css";
+import "./Navbar.css";
 import { assets } from "../assets/assets";
 import { StoreContext } from "../Context/StoreContext";
 
