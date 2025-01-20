@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
   const [isUpdating, setIsUpdating] = useState(false);
   const [token, setToken] = useState("");
   const [food_list, setFoodList] = useState([]);
-  const url = "http://localhost:4000";
+  const url = "https://food-del-backend-hnvd.onrender.com";
 
   // Add item to cart
   const addToCart = async (itemId) => {
